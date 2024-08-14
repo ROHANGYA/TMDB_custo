@@ -29,7 +29,6 @@ class _HomeScreenState extends State<HomeScreen> {
   late final UpcomingMoviesCubit _upcomingMoviesCubit;
   double maxHeaderHeight = 140;
   late ScrollController _scrollController;
-  late PageController _pageController;
 
   @override
   void initState() {
@@ -42,8 +41,6 @@ class _HomeScreenState extends State<HomeScreen> {
     _upcomingMoviesCubit.fetchUpcomingMovies();
 
     _scrollController = ScrollController();
-
-    _pageController = PageController(initialPage: 0);
   }
 
   @override
